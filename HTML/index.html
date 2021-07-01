@@ -1,80 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
+  <title>Photosnap Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style/style.css">
 </head>
+
 <body>
+  <header>
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a href="/" class="logo flex flex-ai-c"><img src="/assets/shared/desktop/logo.svg" alt="photosnap"></a>
 
-  Stories
-  Features
-  Pricing
+      <div class="menu-btn hide-for-desktop flex flex-ai-c">
+        <div class="menu-btn__burger"></div>
+      </div>
 
-  Get an invite
+      <div class="links flex hide-for-mobile">
+        <a href="#">Stories</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+      </div>
+      <button class="get-invite-btn hide-for-mobile" type="button">GET AN INVITE</button>
+    </nav>
+    <div class="overlay"></div>
+    <div class="menu flex flex-fd-c flex-ai-c hide-for-desktop">
+      <div class="menu-links flex flex-fd-c flex-ai-c">
+        <a href="#">Stories</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+      </div>
+      <button class="get-invite-btn-menu" type="button">GET AN INVITE</button>
+    </div>
+  </header>
+  <main>
+    <section class="create-stories section-stories">
+      <div class="create-stories-img"></div>
+      <div class="create-stories-txt section-txt">
+        <div class="gradient"></div>
+        <h2>Create and share your photo Stories.</h2>
+        <h3>Photosnap is a platform for photographers and visual storytellers. We make it
+          easy to share photos, tell stories and connect with others.</h3>
+        <div class="get-invite">
+          <span>Get an invite</span>
+          <img src="/assets/shared/desktop/arrow.svg">
+        </div>
+      </div>
+    </section>
+    <section class="beauti-stories section-stories">
+      <div class="beauti-stories-img"></div>
+      <div class="beauti-stories-txt section-txt">
+        <h2>Beautiful stories every time</h2>
+        <h3>We provide design templates to ensure your stories look terrific. Easily add
+          photos, text, embed maps and media from other networks. Then share your story
+          with everyone.</h3>
+        <div class="view-stories get-invite">
+          <span>View the stories</span>
+          <img src="/assets/shared/desktop/arrow-black.svg">
+        </div>
+      </div>
+    </section>
+    <section class="design-stories section-stories">
+      <div class="design-stories-img"></div>
+      <div class="design-stories-txt section-txt">
+        <h2>Designed for everyone</h2>
+        <h3>Photosnap can help you create stories that resonate with your audience. Our
+          tool is designed for photographers of all levels, brands, businesses you name it.</h3>
+        <div class="view-stories get-invite">
+          <span>View the stories</span>
+          <img src="/assets/shared/desktop/arrow-black.svg">
+        </div>
+      </div>
+    </section>
+    <section class="stories">
+      <div class="mountains story">
+        <div class="mountains-text story-text">
+          <div class="story-details">
+            <p class="story-name">The Mountains</p>
+            <p class="story-author">by John Appleseed</p>
+          </div>
+          <div class="story-read">
+            <span class="read-story">Read Story</span>
+            <img src="/assets/shared/desktop/arrow.svg">
+          </div>
+        </div>
+      </div>
+      <div class="sunset story">
+        <div class="sunset-text story-text">
+          <div class="story-details">
+            <p class="story-name">Sunset Cityscapes</p>
+            <p class="story-author">by Benjamin Cruz</p>
+          </div>
+          <div class="story-read">
+            <span class="read-story">Read Story</span>
+            <img src="/assets/shared/desktop/arrow.svg">
+          </div>
+        </div>
+      </div>
+      <div class="voyage story">
+        <div class="voyage-text story-text">
+          <div class="story-details">
+            <p class="story-name">18 Days Voyage</p>
+            <p class="story-author">by Alexei Borodin</p>
+          </div>
+          <div class="story-read">
+            <span class="read-story">Read Story</span>
+            <img src="/assets/shared/desktop/arrow.svg">
+          </div>
+        </div>
+      </div>
+      <div class="architect story">
+        <div class="architect-text story-text">
+          <div class="story-details">
+            <p class="story-name">Architecturals</p>
+            <p class="story-author">by Samantha Brooke</p>
+          </div>
+          <div class="story-read">
+            <span class="read-story">Read Story</span>
+            <img src="/assets/shared/desktop/arrow.svg">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="benefits flex flex-fd-c flex-ai-c flex-jc-sa">
+      <div class="responive benefit">
+        <img src="/assets/features/desktop/responsive.svg">
+        <div class="benefit-txt">
+          <h3>100% Responsive</h3>
+          <p>No matter which the device you’re on, our site is fully responsive and stories
+            look beautiful on any screen.</p>
+        </div>
+      </div>
+      <div class="no-limit benefit">
+        <img src="/assets/features/desktop/no-limit.svg">
+        <div class="benefit-txt">
+          <h3>No Photo Upload Limit</h3>
+          <p>Our tool has no limits on uploads or bandwidth. Freely upload in bulk and
+            share all of your stories in one go.</p>
+        </div>
+      </div>
+      <div class="embed benefit">
+        <img src="/assets/features/desktop/embed.svg">
+        <div class="benefit-txt">
+          <h3>Available to Embed</h3>
+          <p>Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos,
+            Google Maps, and more.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-top">
+      <a href="/" class="logo logo-footer"><img src="/assets/shared/desktop/logo-white.svg" alt="photosnap"></a>
+      <div class="footer-links-hidden hide-for-mobile flex flex-fd-c flex-ai-c flex-jc-sb">
+        <a href="#">Home</a>
+        <a href="#">Stories</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+      </div>
+      <div class="socials flex flex-jc-sb">
+        <img src="/assets/shared/desktop/facebook-white.svg">
+        <img src="/assets/shared/desktop/youtube-white.svg">
+        <img src="/assets/shared/desktop/twitter-white.svg">
+        <img src="/assets/shared/desktop/pinterest-white.svg">
+        <img src="/assets/shared/desktop/instagram-white.svg">
+      </div>
+      <div class="footer-links hide-for-desktop flex flex-fd-c flex-ai-c flex-jc-sb">
+        <a href="#">Home</a>
+        <a href="#">Stories</a>
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+      </div>
 
-  Create and share your photo Stories
-
-  Photosnap is a platform for photographers and visual storytellers. We make it 
-  easy to share photos, tell stories and connect with others.
-
-  Beautiful stories every time
-  
-  We provide design templates to ensure your stories look terrific. Easily add 
-  photos, text, embed maps and media from other networks. Then share your story 
-  with everyone.
-
-  View the stories
-
-  Designed for everyone
-
-  Photosnap can help you create stories that resonate with your audience.  Our 
-  tool is designed for photographers of all levels, brands, businesses you name it. 
-
-  View the stories
-
-  The Mountains
-  by John Appleseed
-  Read Story
-
-  Sunset Cityscapes
-  by Benjamin Cruz
-  Read Story
-
-  18 Days Voyage
-  by Alexei Borodin
-  Read Story
-
-  Architecturals
-  by Samantha Brooke
-  Read Story
-
-  100% Responsive
-
-  No matter which the device you’re on, our site is fully responsive and stories 
-  look beautiful on any screen.
-
-  No Photo Upload Limit
-
-  Our tool has no limits on uploads or bandwidth. Freely upload in bulk and 
-  share all of your stories in one go.
-
-  Available to Embed
-
-  Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, 
-  Google Maps, and more. 
-
-  Home
-  Stories
-  Features
-  Pricing
-
-  Get an invite
-
-  Copyright 2019. All Rights Reserved
-
+    </div>
+    <div class="footer-bottom">
+      <div class="get-invite get-invite-footer flex flex-ai-c flex-jc-sb">
+        <span>Get an invite</span>
+        <img src="/assets/shared/desktop/arrow.svg">
+      </div>
+      <span class="copyright">Copyright 2019. All Rights Reserved</span>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
 </body>
+
 </html>

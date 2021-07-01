@@ -1,0 +1,122 @@
+header {
+    nav {
+        width: 87.2%;
+        margin: auto;
+        height: 7.2rem;
+    
+        .links {
+            a {
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: .25rem;
+                color: black;
+                transition: opacity 0.2s ease-in-out;
+
+                &:not(:last-child) {
+                    margin-right: 3.7rem;
+                }
+
+                &:hover{
+                    opacity: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    nav {
+        width: 90%;
+        margin: auto;
+
+        .links {
+            font-size: 1.2rem;
+        }
+    }
+    button {
+        width: 15.8rem;
+        height: 4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
+        width: 77%;
+        margin: auto;
+    }
+}
+
+.menu-btn {
+    width: 2rem;
+    height: .6rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: .1rem;
+    background: #000000;
+    transition: all .3s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-.25rem);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(.25rem);
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg);
+}
+
+.overlay {
+    display: none;
+    background-color: black;
+    position: absolute;
+    opacity: 50%;
+    height: 100%;
+    width: 100%;
+    top: 7.2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.menu {
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    z-index: 2;
+
+    .menu-links {
+        margin-top: 3.2rem;
+        width: 82.6%;
+        margin: auto;
+        border-bottom: 1px solid rgba(151, 151, 151, 0.25);
+
+        a {
+            color: black;
+            margin-bottom: 2rem;
+
+            &:first-child {
+                margin-top: 3.2rem;
+            }
+        }
+    }
+
+    .get-invite-btn-menu {
+        margin: 2rem 0 3.2rem 0;
+    }
+}
+

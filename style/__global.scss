@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: black;
+    color: white;
+    letter-spacing: .25rem;
+    width: 31rem;
+    height: 4.8rem;
+    font-weight: 700;
+    border: none;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #DFDFDF;
+        color: black;
+    }
+}
+
+// Classes
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-sa {
+        justify-content: space-around;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-fd-c {
+        flex-direction: column;
+    }
+}
+
+$breakpoints-up: ("medium": "640px", "large": "1024px", "xlarge": "1400px");
+$breakpoints-down: ("small": "639px", "medium": "1023px", "large": "1399px");
+
+@mixin breakpoint-up ($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down ($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
+.hide-for-mobile {
+    @include breakpoint-down(small){
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(medium){
+        display: none;
+    }
+}
+
+@mixin set-background ($url) {
+    background: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin set-gradient-and-background ($gradient, $url) {
+    background: $gradient, url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
