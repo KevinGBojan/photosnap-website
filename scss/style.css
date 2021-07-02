@@ -339,6 +339,9 @@ footer .copyright {
   footer .footer-links-hidden a {
     color: white;
   }
+  footer .footer-links-hidden a:hover {
+    opacity: 30%;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -577,7 +580,7 @@ footer .copyright {
   opacity: 60%;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 640px) {
   .section-stories {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -716,6 +719,21 @@ footer .copyright {
   .stories .story-text {
     position: absolute;
     top: 70%;
+  }
+  .stories .story {
+    -webkit-transition: -webkit-transform .2s ease-in-out;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, -webkit-transform .2s ease-in-out;
+  }
+  .stories .story:hover {
+    -webkit-transform: translateY(-2.4rem);
+            transform: translateY(-2.4rem);
+    border-bottom: 6px solid transparent;
+    -o-border-image: linear-gradient(90deg, #FFC593, #BC7198, #5A77FF);
+       border-image: -webkit-gradient(linear, left top, right top, from(#FFC593), color-stop(#BC7198), to(#5A77FF));
+       border-image: linear-gradient(90deg, #FFC593, #BC7198, #5A77FF);
+    border-image-slice: 1;
   }
   .benefits {
     width: calc(310/768*100%);

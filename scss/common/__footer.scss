@@ -90,9 +90,14 @@ footer {
             text-transform: uppercase;
             letter-spacing: .2rem;
             height: 1.6rem;
+            
             a {
                 color: white;
             }
+        }
+
+        .footer-links-hidden a:hover{
+            opacity: 30%;
         }
     }
 }
