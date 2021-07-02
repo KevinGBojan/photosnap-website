@@ -375,7 +375,7 @@ footer .copyright {
   font-size: 1.5rem;
   line-height: 2.5rem;
   opacity: 60%;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.2rem;
 }
 
 .featured .featured-txt .featured-author-date {
@@ -645,11 +645,19 @@ footer .copyright {
     height: 65rem;
   }
   .featured .featured-txt {
-    padding: 12.2rem 30rem 12.2rem 11.2rem;
+    width: 38.7rem;
+    padding: 0;
+    margin: 12.2rem 0 12.2rem 11.2rem;
     background-color: transparent;
     position: absolute;
     z-index: 2;
     top: 0;
+  }
+  .featured .featured-txt h2 {
+    margin-bottom: 2.4rem;
+  }
+  .featured .featured-txt .featured-author-date {
+    margin-bottom: 2.8rem;
   }
   .featured .featured-img {
     height: 100%;
