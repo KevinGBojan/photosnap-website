@@ -118,7 +118,7 @@ header nav .links a:hover {
     margin: auto;
   }
   nav .links {
-    padding: 0 1rem 0 1rem;
+    padding: 0 2rem 0 2rem;
     font-size: 1.2rem;
   }
   button {
@@ -272,6 +272,7 @@ footer .get-invite-footer {
   cursor: pointer;
   width: 17.2rem;
   margin-bottom: 3.4rem;
+  text-transform: uppercase;
 }
 
 footer .get-invite-footer span {
@@ -480,6 +481,28 @@ footer .copyright {
   top: 7rem;
 }
 
+.beta .beta-txt .get-invite-beta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 17.2rem;
+  margin-bottom: 3.4rem;
+  text-transform: uppercase;
+}
+
+.beta .beta-txt .get-invite-beta span {
+  margin-right: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
 .beta .beta-txt h3 {
   font-size: 3.2rem;
   text-transform: uppercase;
@@ -500,7 +523,7 @@ footer .copyright {
     height: 49rem;
   }
   .features-hero .features-hero-img {
-    background: url("/assets/features/mobile/hero.jpg");
+    background: url("/assets/features/tablet/hero.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -520,8 +543,8 @@ footer .copyright {
   }
   .features-hero .features-hero-txt h2 {
     width: 100%;
-    padding-left: 5.4rem;
-    padding-right: 5.4rem;
+    padding-left: 6.8rem;
+    padding-right: 6.8rem;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
@@ -533,8 +556,8 @@ footer .copyright {
   .features-hero .features-hero-txt h3 {
     width: 100%;
     margin: 0;
-    padding-left: 5.4rem;
-    padding-right: 5.4rem;
+    padding-left: 6.8rem;
+    padding-right: 6.8rem;
     font-weight: 300;
     opacity: 60%;
     margin-bottom: 4.8rem;
@@ -552,12 +575,8 @@ footer .copyright {
     width: calc(340/375*100%);
     max-width: 34rem;
   }
-  .beta .gradient {
-    position: absolute;
-    height: .6rem;
-    left: 3.3rem;
-    width: 12.8rem;
-    background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+  .beta {
+    height: 28rem;
   }
   .beta .beta-img {
     background: url("/assets/shared/tablet/bg-beta.jpg");
@@ -568,20 +587,76 @@ footer .copyright {
     width: 100%;
   }
   .beta .beta-txt {
-    width: calc(310/375*100%);
+    width: 100%;
+    padding: 0 4rem 0 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
     color: white;
     position: absolute;
     z-index: 2;
-    left: 3.3rem;
+    left: 0rem;
     top: 7rem;
   }
   .beta .beta-txt h3 {
     max-width: 40rem;
-    font-size: 3.2rem;
-    text-transform: uppercase;
-    letter-spacing: .333rem;
-    line-height: 4rem;
-    margin-bottom: 3.2rem;
+    font-size: 4rem;
+    letter-spacing: .417rem;
+    line-height: 4.8rem;
+  }
+  .beta .gradient {
+    height: 100%;
+    left: 0rem;
+    width: .6rem;
+    background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+  }
+}
+
+@media (min-width: 1024px) {
+  .features-hero .features-hero-img {
+    background: url("/assets/features/desktop/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .features-hero .features-hero-txt {
+    max-width: 61rem;
+  }
+  .features-hero-txt h2 {
+    padding-left: 11.2rem;
+    padding-right: 14rem;
+  }
+  .features-hero-txt h3 {
+    padding-left: 11.2rem;
+    padding-right: 14rem;
+  }
+  .benefits {
+    padding: 0;
+    margin: 16rem 0 16rem 0;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: (23.6rem)[2];
+        grid-template-rows: repeat(2, 23.6rem);
+    row-gap: 10.4rem;
+  }
+  .beta .beta-img {
+    background: url("/assets/shared/desktop/bg-beta.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .beta .beta-txt {
+    padding: 0rem 17.1rem 0rem 17.1rem;
+  }
+  .beta .beta-txt .get-invite-beta span:hover {
+    text-decoration: underline;
   }
 }
 /*# sourceMappingURL=features.css.map */

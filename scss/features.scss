@@ -105,6 +105,23 @@
         left: 3.3rem;
         top: 7rem;
 
+        .get-invite-beta {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 17.2rem;
+            margin-bottom: 3.4rem;
+            text-transform: uppercase;
+        
+            span {
+                margin-right: 1.6rem;
+                font-weight: 700;
+                letter-spacing: .2rem;
+                color: white;
+                font-size: 1.2rem;
+            }
+        }
 
         h3 {
             font-size: 3.2rem;
@@ -123,7 +140,7 @@
         height: 49rem;
 
         .features-hero-img {
-            @include set-background("/assets/features/mobile/hero.jpg");
+            @include set-background("/assets/features/tablet/hero.jpg");
             height: 49rem;
             width: 100%;
         }
@@ -142,8 +159,8 @@
 
             h2 {
                 width: 100%;
-                padding-left: 5.4rem;
-                padding-right: 5.4rem;
+                padding-left: 6.8rem;
+                padding-right: 6.8rem;
                 text-transform: uppercase;
                 font-size: 4rem;
                 font-weight: 700;
@@ -155,8 +172,8 @@
             h3 {
                 width: 100%;
                 margin: 0;
-                padding-left: 5.4rem;
-                padding-right: 5.4rem;
+                padding-left: 6.8rem;
+                padding-right: 6.8rem;
                 font-weight: 300;
                 opacity: 60%;
                 margin-bottom: 4.8rem;
@@ -177,13 +194,7 @@
         }
     }
     .beta {
-        .gradient {
-            position: absolute;
-            height: .6rem;
-            left: 3.3rem;
-            width: 12.8rem;
-            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
-        }
+        height: 28rem;
     
         .beta-img {
             @include set-background("/assets/shared/tablet/bg-beta.jpg");
@@ -192,22 +203,77 @@
         }
     
         .beta-txt {
-            width: calc(310/375*100%);
+            width: 100%;
+            padding: 0 4rem 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
             color: white;
             position: absolute;
             z-index: 2;
-            left: 3.3rem;
+            left: 0rem;
             top: 7rem;
     
     
             h3 {
                 max-width: 40rem;
-                font-size: 3.2rem;
-                text-transform: uppercase;
-                letter-spacing: .333rem;
-                line-height: 4rem;
-                margin-bottom: 3.2rem;
+                font-size: 4rem;
+                letter-spacing: .417rem;
+                line-height: 4.8rem;
             }
         }
+
+        .gradient {
+            height: 100%;
+            left: 0rem;
+            width: .6rem;
+            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-hero {
+        .features-hero-img {
+            @include set-background("/assets/features/desktop/hero.jpg");
+        }
+        
+        .features-hero-txt {
+            max-width: 61rem;
+        }
+    }
+
+    .features-hero-txt {
+        h2 {
+            padding-left: 11.2rem;
+            padding-right: 14rem;
+        }
+        h3 {
+            padding-left: 11.2rem;
+            padding-right: 14rem;
+        }
+    }
+
+    .benefits {
+        padding: 0;
+        margin: 16rem 0 16rem 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 23.6rem);
+        row-gap: 10.4rem;
+    }
+    .beta {
+        .beta-img {
+            @include set-background("/assets/shared/desktop/bg-beta.jpg");
+        }
+    
+        .beta-txt {
+            padding: 0rem 17.1rem 0rem 17.1rem;
+            .get-invite-beta span:hover {
+                text-decoration: underline;
+            }
+    
+        }
+        
     }
 }

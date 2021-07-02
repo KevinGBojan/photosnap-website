@@ -118,7 +118,7 @@ header nav .links a:hover {
     margin: auto;
   }
   nav .links {
-    padding: 0 1rem 0 1rem;
+    padding: 0 2rem 0 2rem;
     font-size: 1.2rem;
   }
   button {
@@ -272,6 +272,7 @@ footer .get-invite-footer {
   cursor: pointer;
   width: 17.2rem;
   margin-bottom: 3.4rem;
+  text-transform: uppercase;
 }
 
 footer .get-invite-footer span {
