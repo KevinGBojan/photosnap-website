@@ -118,6 +118,7 @@ header nav .links a:hover {
     margin: auto;
   }
   nav .links {
+    padding: 0 1rem 0 1rem;
     font-size: 1.2rem;
   }
   button {
@@ -286,7 +287,7 @@ footer .copyright {
   opacity: 50.25%;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 640px) {
   footer {
     padding: 0 4rem 0 4rem;
     height: 28.4rem;
@@ -350,6 +351,9 @@ footer .copyright {
   }
   footer .footer-links-hidden a:hover {
     opacity: 30%;
+  }
+  footer .get-invite-footer span:hover {
+    text-decoration: underline;
   }
 }
 

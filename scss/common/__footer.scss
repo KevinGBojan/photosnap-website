@@ -54,7 +54,7 @@ footer {
     }
 }
 
-@media (min-width: 650px) {
+@media (min-width: 640px) {
     footer {
         padding: 0 4rem 0 4rem;
         height: 28.4rem;
@@ -81,7 +81,7 @@ footer {
         .socials {
             margin-top: 6rem;
         }
-    
+
         .footer-links-hidden {
             margin: 0;
             width: 31.5rem;
@@ -108,6 +108,10 @@ footer {
 
         .footer-links-hidden a:hover{
             opacity: 30%;
+        }
+
+        .get-invite-footer span:hover {
+            text-decoration: underline;
         }
     }
 }

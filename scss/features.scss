@@ -1,3 +1,213 @@
 @import "../scss/common/_global";
 @import "../scss/common/_header";
 @import "../scss/common/_footer";
+
+.features-hero {
+    height: 59.4rem;
+
+    .features-hero-img {
+        @include set-background("/assets/features/mobile/hero.jpg");
+        height: 29.4rem;
+        width: 100%;
+    }
+    
+    .features-hero-txt {
+        background-color: black;
+        color: white;
+        height: 30rem;
+
+        h2 {
+            width: 84.8%;
+            margin: auto;
+            text-transform: uppercase;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 4rem;
+            letter-spacing: .333rem;
+            margin-bottom: 1.6rem;
+            margin-top: 6.6rem;
+        }
+        h3 {
+            font-weight: 300;
+            opacity: 60%;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            width: 84.8%;
+            margin: auto;
+            margin-bottom: 2.3rem;
+        }
+
+        .gradient {
+            margin-left: 3.3rem;
+            height: .6rem;
+            width: 12.8rem;
+            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+        }
+    }
+}
+
+.benefits {
+    padding: 6.4rem 0 6.4rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,23.6rem);
+    row-gap: 5.6rem;
+
+    .benefit {
+        width: calc(310/375*100%);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .benefit-txt {
+            margin-top: 4.8rem;
+
+            h3 {
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                font-weight: 700;
+            }
+            p {
+                margin-top: 1.6rem;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                opacity: 60%;
+            }
+        }
+    }
+}
+
+.beta {
+    position: relative;
+    height: 28.8rem;
+
+    .gradient {
+        position: absolute;
+        height: .6rem;
+        left: 3.3rem;
+        width: 12.8rem;
+        background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+    }
+
+    .beta-img {
+        @include set-background("/assets/shared/mobile/bg-beta.jpg");
+        height: 100%;
+        width: 100%;
+    }
+
+    .beta-txt {
+        width: calc(310/375*100%);
+        color: white;
+        position: absolute;
+        z-index: 2;
+        left: 3.3rem;
+        top: 7rem;
+
+
+        h3 {
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            letter-spacing: .333rem;
+            line-height: 4rem;
+            margin-bottom: 3.2rem;
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .features-hero {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 49rem;
+
+        .features-hero-img {
+            @include set-background("/assets/features/mobile/hero.jpg");
+            height: 49rem;
+            width: 100%;
+        }
+        
+        .features-hero-txt {
+            position: relative;
+            height: 49rem;
+
+            .gradient {
+                position: absolute;
+                top: 17.3rem;
+                margin: 0;
+                height: 14.4rem;
+                width: .6rem;
+            }
+
+            h2 {
+                width: 100%;
+                padding-left: 5.4rem;
+                padding-right: 5.4rem;
+                text-transform: uppercase;
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 4.8rem;
+                letter-spacing: .417rem;
+                margin-bottom: 2.1rem;
+                margin-top: 17.3rem;
+            }
+            h3 {
+                width: 100%;
+                margin: 0;
+                padding-left: 5.4rem;
+                padding-right: 5.4rem;
+                font-weight: 300;
+                opacity: 60%;
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+
+    .benefits {
+        padding: 0;
+        margin: 21.1rem 0 21.1rem 0;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 23.6rem);
+        row-gap: 7rem;
+    
+        .benefit {
+            width: calc(340/375*100%);
+            max-width: 34rem;
+        }
+    }
+    .beta {
+        .gradient {
+            position: absolute;
+            height: .6rem;
+            left: 3.3rem;
+            width: 12.8rem;
+            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+        }
+    
+        .beta-img {
+            @include set-background("/assets/shared/tablet/bg-beta.jpg");
+            height: 100%;
+            width: 100%;
+        }
+    
+        .beta-txt {
+            width: calc(310/375*100%);
+            color: white;
+            position: absolute;
+            z-index: 2;
+            left: 3.3rem;
+            top: 7rem;
+    
+    
+            h3 {
+                max-width: 40rem;
+                font-size: 3.2rem;
+                text-transform: uppercase;
+                letter-spacing: .333rem;
+                line-height: 4rem;
+                margin-bottom: 3.2rem;
+            }
+        }
+    }
+}
