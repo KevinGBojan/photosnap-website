@@ -6,6 +6,7 @@ header {
     
         .links {
             a {
+                font-size: 1.2rem;
                 text-transform: uppercase;
                 font-weight: 700;
                 letter-spacing: .25rem;
@@ -90,6 +91,7 @@ header {
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 2;
 }
 
 .menu {

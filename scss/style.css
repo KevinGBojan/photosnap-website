@@ -95,6 +95,7 @@ header nav {
 }
 
 header nav .links a {
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .25rem;
@@ -182,6 +183,7 @@ header nav .links a:hover {
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 2;
 }
 
 .menu {
@@ -212,13 +214,140 @@ header nav .links a:hover {
   margin: 2rem 0 3.2rem 0;
 }
 
-.wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100vw;
-      grid-template-columns: 100vw;
-  -ms-grid-rows: 33vh 33vh 33vh;
-      grid-template-rows: 33vh 33vh 33vh;
+footer {
+  height: 53.9rem;
+  background-color: black;
+}
+
+footer .footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .logo-footer {
+  margin-top: 5.6rem;
+  margin-bottom: 3.2rem;
+}
+
+footer .socials {
+  width: 15.4rem;
+  margin-bottom: 4.9rem;
+}
+
+footer .footer-links {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  height: 12.1rem;
+  margin-bottom: 11.9rem;
+}
+
+footer .footer-links a {
+  color: white;
+}
+
+footer .get-invite-footer {
+  cursor: pointer;
+  width: 17.2rem;
+  margin-bottom: 3.4rem;
+}
+
+footer .get-invite-footer span {
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+footer .copyright {
+  font-size: 1.5rem;
+  color: white;
+  opacity: 50.25%;
+}
+
+@media (min-width: 650px) {
+  footer {
+    padding: 0 4rem 0 4rem;
+    height: 28.4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer-top {
+    height: 15.6rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer-bottom {
+    height: 15.6rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  footer .logo-footer {
+    margin-bottom: 2.9rem;
+  }
+  footer .socials {
+    margin-top: 6rem;
+  }
+  footer .footer-links-hidden {
+    margin: 0;
+    width: 31.5rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    height: 1.6rem;
+  }
+  footer .footer-links-hidden a {
+    color: white;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    padding: 0rem 17.1rem 0rem 17.1rem;
+  }
+  footer .footer-links-hidden a:hover {
+    opacity: 30%;
+  }
 }
 
 .section-stories {
@@ -448,78 +577,6 @@ header nav .links a:hover {
   opacity: 60%;
 }
 
-footer {
-  height: 53.9rem;
-  background-color: black;
-}
-
-footer .footer-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .footer-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .logo-footer {
-  margin-top: 5.6rem;
-  margin-bottom: 3.2rem;
-}
-
-footer .socials {
-  width: 15.4rem;
-  margin-bottom: 4.9rem;
-}
-
-footer .footer-links {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
-  height: 12.1rem;
-  margin-bottom: 11.9rem;
-}
-
-footer .footer-links a {
-  color: white;
-}
-
-footer .get-invite-footer {
-  cursor: pointer;
-  width: 17.2rem;
-  margin-bottom: 3.4rem;
-}
-
-footer .get-invite-footer span {
-  font-weight: 700;
-  letter-spacing: .2rem;
-  color: white;
-  font-size: 1.2rem;
-}
-
-footer .copyright {
-  font-size: 1.5rem;
-  color: white;
-  opacity: 50.25%;
-}
-
 @media (min-width: 650px) {
   .section-stories {
     -webkit-box-orient: horizontal;
@@ -692,58 +749,6 @@ footer .copyright {
     line-height: 2.5rem;
     opacity: 60%;
   }
-  footer {
-    padding: 0 4rem 0 4rem;
-    height: 28.4rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer-top {
-    height: 15.6rem;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  footer .footer-bottom {
-    height: 15.6rem;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  footer .logo-footer {
-    margin-bottom: 2.9rem;
-  }
-  footer .socials {
-    margin-top: 6rem;
-  }
-  footer .footer-links-hidden {
-    margin: 0;
-    width: 31.5rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    height: 1.6rem;
-  }
-  footer .footer-links-hidden a {
-    color: white;
-  }
 }
 
 @media (min-width: 1024px) {
@@ -806,6 +811,12 @@ footer .copyright {
   }
   .benefits .benefit:not(:last-child) {
     padding-right: 3rem;
+  }
+  footer {
+    padding: 0rem 17.1rem 0rem 17.1rem;
+  }
+  footer .footer-links-hidden a:hover {
+    opacity: 30%;
   }
 }
 /*# sourceMappingURL=style.css.map */

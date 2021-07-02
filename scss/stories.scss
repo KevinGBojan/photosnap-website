@@ -1,0 +1,377 @@
+@import "../scss/common/_global";
+@import "../scss/common/_header";
+@import "../scss/common/_footer";
+
+.featured {
+
+    .featured-txt {
+        padding: 4.8rem 3rem 4.8rem 3rem;
+        height: 100%;
+        color: white;
+        background-color: black;
+        font-weight: 700;
+        h2 {
+            font-size: 1.2rem;
+            letter-spacing: .2rem;
+            margin-bottom: 1.6rem;
+        }
+        h3 {
+            font-size: 3.2rem;
+            letter-spacing: .333rem;
+            margin-bottom: 1.6rem;
+        }
+        h4 {
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            opacity: 60%;
+            margin-bottom: 2.4rem;
+        }
+
+        .featured-author-date {
+            margin-bottom: 2.4rem;
+            font-weight: 400;
+            font-size: 1.3rem;
+            span {
+                margin-left: .9rem;
+                opacity: 75%;
+            }
+        }
+        .story-read {
+            display: flex;
+            cursor: pointer;
+            
+            span {
+                font-weight: 700;
+                font-size: 1.2rem;
+                letter-spacing: .2rem;
+                text-transform: uppercase;
+                margin-right: 1rem;
+
+                &:hover {
+                    text-decoration: underline 1px;
+                }
+            }
+        }
+    }
+
+
+    .featured-img {
+        height: 37.5rem;
+        @include set-background("/assets/stories/mobile/moon-of-appalacia.jpg");
+    }
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16,37.5rem);
+    
+    .mountains {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/mountains.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .sunset {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/cityscapes.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .voyage {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/18-days-voyage.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .architecturals {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/architecturals.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .tour {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/world-tour.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .unforeseen {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/unforeseen-corners.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .king {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/king-on-africa.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .nowhere {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/trip-to-nowhere.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .rage {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/rage-of-the-sea.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .running {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/running-free.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .waves {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/behind-the-waves.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .waters {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/calm-waters.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .milky {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/milky-way.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .forest {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/dark-forest.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .beauty {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/somwarpet.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .dreams {
+        @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/mobile/land-of-dreams.jpg");
+        background-size: 100% 350px, cover;
+        background-position: 0% 25px, center;
+    }
+
+    .story {
+        position: relative;
+    }
+
+    .story-text {
+        position: absolute;
+        left: 10%;
+        top: 56%;
+        right: 10%;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        width: calc(310/375*100%);
+        margin: auto;
+
+        .story-details {
+            border-bottom: 1px solid rgba(151, 151, 151, 0.25);
+
+            .story-name {
+                font-weight: 700;
+                font-size: 1.8rem;
+                line-height: 2.5rem;
+                margin-bottom: .4rem;
+            }
+
+            .story-date, 
+            .story-author {
+                font-weight: 300;
+                font-size: 1.3rem;
+                margin-bottom: 1.6rem;
+            }
+
+            .story-date {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .story-read {
+            margin-top: 2rem;
+            letter-spacing: .2rem;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (min-width: 640px) {
+
+    .featured {
+        position: relative;
+        height: 65rem;
+
+        .featured-txt {
+            padding: 12.2rem 30rem 12.2rem 11.2rem;
+            background-color: transparent;
+            position: absolute;
+            z-index: 2;
+            top: 0;
+        }
+    
+        .featured-img {
+            height: 100%;
+            @include set-background("/assets/stories/tablet/moon-of-appalacia.jpg");
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8, 50rem);
+    
+        .mountains {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/mountains.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .sunset {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/cityscapes.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .voyage {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/18-days-voyage.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .architecturals {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/architecturals.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .tour {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/world-tour.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .unforeseen {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/unforeseen-corners.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .king {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/king-on-africa.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .nowhere {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/trip-to-nowhere.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .rage {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/rage-of-the-sea.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .running {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/running-free.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .waves {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/behind-the-waves.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .waters {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/calm-waters.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .milky {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/milky-way.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .forest {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/dark-forest.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .beauty {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/somwarpet.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+    
+        .dreams {
+            @include set-gradient-and-background(linear-gradient(0deg, rgba(0,0,0,0.6612), rgba(0,0,0,0.01)), "/assets/stories/desktop/land-of-dreams.jpg");
+            background-size: 100% 350px, cover;
+            background-position: 0% 150px, center;
+        }
+        .story-text {
+            top: 66%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .featured {
+        position: relative;
+        height: 65rem;
+
+        .featured-txt {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+        }
+    
+        .featured-img {
+            height: 100%;
+            @include set-background("/assets/stories/desktop/moon-of-appalacia.jpg");
+        }
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 50rem);
+
+        .story {
+            transition: transform .2s ease-in-out;
+        }
+
+        .story:hover {
+            transform: translateY(-2.4rem);
+            border-bottom: 6px solid transparent;
+            border-image: linear-gradient(90deg, #FFC593, #BC7198, #5A77FF);
+            border-image-slice: 1;
+        }
+    }
+}

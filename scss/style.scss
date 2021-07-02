@@ -1,11 +1,6 @@
-@import "./_global";
-@import "./_header";
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 33vh 33vh 33vh;
-}
+@import "../scss/common/_global";
+@import "../scss/common/_header";
+@import "../scss/common/_footer";
 
 .section-stories {
     height: 71.3rem;
@@ -188,62 +183,6 @@
     }
 }
 
-footer {
-    height: 53.9rem;
-    background-color: black;
-
-    .footer-top {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-bottom {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo-footer {
-        margin-top: 5.6rem;
-        margin-bottom: 3.2rem;
-    }
-    
-    .socials {
-        width: 15.4rem;
-        margin-bottom: 4.9rem;
-    }
-
-    .footer-links {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        letter-spacing: .2rem;
-        height: 12.1rem;
-        margin-bottom: 11.9rem;
-        a {
-            color: white;
-        }
-    }
-
-    .get-invite-footer {
-        cursor: pointer;
-        width: 17.2rem;
-        margin-bottom: 3.4rem;
-        span {
-            font-weight: 700;
-            letter-spacing: .2rem;
-            color: white;
-            font-size: 1.2rem;
-        }
-    }
-
-    .copyright {
-        font-size: 1.5rem;
-        color: white;
-        opacity: 50.25%;
-    }
-}
-
 @media (min-width: 650px) {
     .section-stories {
         flex-direction: row;
@@ -397,47 +336,6 @@ footer {
             }
         }
     }
-
-    footer {
-        padding: 0 4rem 0 4rem;
-        height: 28.4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .footer-top {
-            height: 15.6rem;
-            align-items: flex-start;
-            justify-content: center;
-        }
-
-        .footer-bottom {
-            height: 15.6rem;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .logo-footer {
-            margin-bottom: 2.9rem;
-        }
-        
-        .socials {
-            margin-top: 6rem;
-        }
-    
-        .footer-links-hidden {
-            margin: 0;
-            width: 31.5rem;
-            flex-direction: row;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: .2rem;
-            height: 1.6rem;
-            a {
-                color: white;
-            }
-        }
-    }
 }
 
 @media (min-width: 1024px) {
@@ -488,6 +386,14 @@ footer {
             &:not(:last-child) {
                 padding-right: 3rem;
             }
+        }
+    }
+
+    footer {
+        padding: 0rem 17.1rem 0rem 17.1rem;
+
+        .footer-links-hidden a:hover{
+            opacity: 30%;
         }
     }
 }
