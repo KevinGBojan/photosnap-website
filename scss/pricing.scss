@@ -1,3 +1,463 @@
 @import "../scss/common/_global";
 @import "../scss/common/_header";
 @import "../scss/common/_footer";
+
+.pricing-hero {
+    height: 59.4rem;
+
+    .pricing-hero-img {
+        @include set-background("/assets/pricing/mobile/hero.jpg");
+        height: 29.4rem;
+        width: 100%;
+    }
+    
+    .pricing-hero-txt {
+        background-color: black;
+        color: white;
+        height: 30rem;
+
+        h2 {
+            width: 84.8%;
+            margin: auto;
+            text-transform: uppercase;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 4rem;
+            letter-spacing: .333rem;
+            margin-bottom: 1.6rem;
+            margin-top: 6.6rem;
+        }
+        h3 {
+            font-weight: 300;
+            opacity: 60%;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            width: 84.8%;
+            margin: auto;
+            margin-bottom: 2.3rem;
+        }
+
+        .gradient {
+            margin-left: 3.3rem;
+            height: .6rem;
+            width: 12.8rem;
+            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+        }
+    }
+}
+
+.pricing-options {
+    position: relative;
+
+    .pricing-toggle{
+        position: absolute;
+        top: 6.4rem;
+        margin-left: -3.2rem;
+        left: 50%;
+
+        input[type="checkbox"] {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            z-index: -2;
+            border: none;
+            outline: none;
+        }
+
+        label {
+            width: 6.4rem;
+            height: 3.2rem;
+            border-radius: 1.6rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #DFDFDF;
+            transition: background .2s ease-in-out;
+
+            &::after {
+                content: '';
+                width: 2.4rem;
+                height: 2.4rem;
+                background: #000000;
+                border-radius: 50%;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                transition: all .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+        }
+        input[type="checkbox"]:checked + label::after{
+            background: white;
+            left: 3.6rem;
+        }
+        input[type="checkbox"]:checked + label{
+            background: #000000;
+        }
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 40.7rem);
+        row-gap: 2.4rem;
+        text-align: center;
+        padding: 13.6rem 3.9rem 6.4rem 3.9rem;
+
+        .pricing-basic,
+        .pricing-business {
+            background-color: #F5F5F5;
+        }
+
+        .pricing-pro {
+            color: white;
+            background-color: black;
+
+            .gradient {
+                height: .6rem;
+                width: 100%;
+                background: linear-gradient(179.5deg, #FFC593, #BC7198, #5A77FF);
+            }
+        }
+
+        .pick-plan {
+            width: 24.5rem;
+            max-width: 27rem;
+            height: 4rem;
+            letter-spacing: .2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 4rem;
+        }
+
+        .plan-pro {
+            color: black;
+            background-color: white;
+        }
+        
+        .option {
+            h2 {
+                padding: 0 3rem 0 3rem;
+                margin-top: 5.6rem;
+                margin-bottom: 1.8rem;
+                font-weight: 700;
+                font-size: 2.4rem;
+                line-height: 2.5rem;
+            }
+            h3 {
+                padding: 0 3rem 0 3rem;
+                opacity: 60%;
+                font-weight: 400;
+                font-size: 1.5rem;
+                line-height: 2.5rem;
+                margin-bottom: 4rem;
+            }
+            h4 {
+                font-size: 4rem;
+                letter-spacing: .417rem;
+                line-height: 3rem;
+                span {
+                    opacity: 60%;
+                    font-weight: 400;
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                }
+            }
+            .price-tablet {
+                display: none;
+            }
+        }
+        
+
+    }
+}
+
+.comparing {
+    padding: 0 0 6.4rem 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    table {
+        min-width: 31.8rem;
+        max-width: 68.9rem;
+    }
+
+    thead th {
+        padding-bottom: 2.3rem;
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+        font-weight: 700;
+        text-align: left;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    table tr {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .heading {
+        padding: 2.3rem 0 2.3rem 0;
+        font-size: 1.2rem;
+        letter-spacing: .2rem;
+        font-weight: 700;
+    }
+
+    .comp-row {
+        border-bottom: 1px solid #DFDFDF;
+        padding-bottom: 2.3rem;
+    }
+
+    .comp-row span {
+        font-size: 1rem;
+        letter-spacing: .167rem;
+        font-weight: 700;
+        opacity: 50%;
+    }
+
+    .comp-row {
+        opacity: 100%;
+    }
+}
+
+
+.beta {
+    position: relative;
+    height: 28.8rem;
+
+    .gradient {
+        position: absolute;
+        height: .6rem;
+        left: 3.3rem;
+        width: 12.8rem;
+        background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+    }
+
+    .beta-img {
+        @include set-background("/assets/shared/mobile/bg-beta.jpg");
+        height: 100%;
+        width: 100%;
+    }
+
+    .beta-txt {
+        width: calc(310/375*100%);
+        color: white;
+        position: absolute;
+        z-index: 2;
+        left: 3.3rem;
+        top: 7rem;
+
+        .get-invite-beta {
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 17.2rem;
+            margin-bottom: 3.4rem;
+            text-transform: uppercase;
+        
+            span {
+                margin-right: 1.6rem;
+                font-weight: 700;
+                letter-spacing: .2rem;
+                color: white;
+                font-size: 1.2rem;
+            }
+        }
+
+        h3 {
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            letter-spacing: .333rem;
+            line-height: 4rem;
+            margin-bottom: 3.2rem;
+        }
+    }
+}
+
+
+@media (min-width: 640px) {
+    .pricing-hero {
+        display: flex;
+        flex-direction: row-reverse;
+        height: 49rem;
+
+        .pricing-hero-img {
+            @include set-background("/assets/pricing/tablet/hero.jpg");
+            height: 49rem;
+            width: 100%;
+        }
+        
+        .pricing-hero-txt {
+            position: relative;
+            height: 49rem;
+
+            .gradient {
+                position: absolute;
+                top: 17.3rem;
+                margin: 0;
+                height: 14.4rem;
+                width: .6rem;
+            }
+
+            h2 {
+                width: 100%;
+                padding-left: 6.8rem;
+                padding-right: 6.8rem;
+                text-transform: uppercase;
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 4.8rem;
+                letter-spacing: .417rem;
+                margin-bottom: 2.1rem;
+                margin-top: 17.3rem;
+            }
+            h3 {
+                width: 100%;
+                margin: 0;
+                padding-left: 6.8rem;
+                padding-right: 6.8rem;
+                font-weight: 300;
+                opacity: 60%;
+                margin-bottom: 4.8rem;
+            }
+        }
+    }
+
+    .pricing-options .options .price-mobile {
+        display: none;
+    }
+
+    .pricing-options .options .price-tablet {
+        display: block;
+    }
+
+    .options {
+        grid-template-rows: repeat(3, 27rem);
+        .pricing-pro {
+            .gradient {
+                height: .6rem;
+                width: 100%;
+                background: linear-gradient(179.5deg, #FFC593, #BC7198, #5A77FF);
+            }
+        }
+
+        .option {
+            display: flex;
+            text-align: left;
+            padding: 4rem;
+
+            .pricing-excl-price {
+                h2 {
+                    padding: 0 0 0 0;
+                    margin-top: 4rem;
+                    margin-bottom: 2.2rem;
+                }
+                h3 {
+                    padding: 0 0 0 0;
+                    margin-bottom: 3.2rem;
+                }
+            }
+
+        }
+    }
+
+    .comparing {
+
+        table {
+            width: 68.9rem;
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+
+        .heading th {
+            display: none;
+        }
+    }
+
+    .beta {
+        height: 28rem;
+    
+        .beta-img {
+            @include set-background("/assets/shared/tablet/bg-beta.jpg");
+            height: 100%;
+            width: 100%;
+        }
+    
+        .beta-txt {
+            width: 100%;
+            padding: 0 4rem 0 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            color: white;
+            position: absolute;
+            z-index: 2;
+            left: 0rem;
+            top: 7rem;
+    
+    
+            h3 {
+                max-width: 40rem;
+                font-size: 4rem;
+                letter-spacing: .417rem;
+                line-height: 4.8rem;
+            }
+        }
+
+        .gradient {
+            height: 100%;
+            left: 0rem;
+            width: .6rem;
+            background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .pricing-hero {
+        .pricing-hero-img {
+            @include set-background("/assets/pricing/desktop/hero.jpg");
+        }
+        
+        .pricing-hero-txt {
+            max-width: 61rem;
+        }
+    }
+
+    .pricing-hero-txt {
+        h2 {
+            padding-left: 11.2rem;
+            padding-right: 14rem;
+        }
+        h3 {
+            padding-left: 11.2rem;
+            padding-right: 14rem;
+        }
+    }
+
+    .options {
+        .plan-pro:hover{
+            background-color: #DFDFDF;
+            color: black;
+        }
+    }
+
+    .beta {
+        .beta-img {
+            @include set-background("/assets/shared/desktop/bg-beta.jpg");
+        }
+    
+        .beta-txt {
+            padding: 0rem 17.1rem 0rem 17.1rem;
+            .get-invite-beta span:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

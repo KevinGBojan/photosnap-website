@@ -31,8 +31,10 @@ button {
     border: none;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
+}
 
-    &:hover{
+@media (min-width: 1024px) {
+    button:hover{
         background-color: #DFDFDF;
         color: black;
     }

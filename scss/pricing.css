@@ -35,9 +35,11 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #DFDFDF;
-  color: black;
+@media (min-width: 1024px) {
+  button:hover {
+    background-color: #DFDFDF;
+    color: black;
+  }
 }
 
 .flex {
@@ -354,6 +356,481 @@ footer .copyright {
     opacity: 30%;
   }
   footer .get-invite-footer span:hover {
+    text-decoration: underline;
+  }
+}
+
+.pricing-hero {
+  height: 59.4rem;
+}
+
+.pricing-hero .pricing-hero-img {
+  background: url("/assets/pricing/mobile/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 29.4rem;
+  width: 100%;
+}
+
+.pricing-hero .pricing-hero-txt {
+  background-color: black;
+  color: white;
+  height: 30rem;
+}
+
+.pricing-hero .pricing-hero-txt h2 {
+  width: 84.8%;
+  margin: auto;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4rem;
+  letter-spacing: .333rem;
+  margin-bottom: 1.6rem;
+  margin-top: 6.6rem;
+}
+
+.pricing-hero .pricing-hero-txt h3 {
+  font-weight: 300;
+  opacity: 60%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  width: 84.8%;
+  margin: auto;
+  margin-bottom: 2.3rem;
+}
+
+.pricing-hero .pricing-hero-txt .gradient {
+  margin-left: 3.3rem;
+  height: .6rem;
+  width: 12.8rem;
+  background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+}
+
+.pricing-options {
+  position: relative;
+}
+
+.pricing-options .pricing-toggle {
+  position: absolute;
+  top: 6.4rem;
+  margin-left: -3.2rem;
+  left: 50%;
+}
+
+.pricing-options .pricing-toggle input[type="checkbox"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -2;
+  border: none;
+  outline: none;
+}
+
+.pricing-options .pricing-toggle label {
+  width: 6.4rem;
+  height: 3.2rem;
+  border-radius: 1.6rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #DFDFDF;
+  -webkit-transition: background .2s ease-in-out;
+  transition: background .2s ease-in-out;
+}
+
+.pricing-options .pricing-toggle label::after {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  -webkit-transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.pricing-options .pricing-toggle input[type="checkbox"]:checked + label::after {
+  background: white;
+  left: 3.6rem;
+}
+
+.pricing-options .pricing-toggle input[type="checkbox"]:checked + label {
+  background: #000000;
+}
+
+.pricing-options .options {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (40.7rem)[3];
+      grid-template-rows: repeat(3, 40.7rem);
+  row-gap: 2.4rem;
+  text-align: center;
+  padding: 13.6rem 3.9rem 6.4rem 3.9rem;
+}
+
+.pricing-options .options .pricing-basic,
+.pricing-options .options .pricing-business {
+  background-color: #F5F5F5;
+}
+
+.pricing-options .options .pricing-pro {
+  color: white;
+  background-color: black;
+}
+
+.pricing-options .options .pricing-pro .gradient {
+  height: .6rem;
+  width: 100%;
+  background: linear-gradient(179.5deg, #FFC593, #BC7198, #5A77FF);
+}
+
+.pricing-options .options .pick-plan {
+  width: 24.5rem;
+  max-width: 27rem;
+  height: 4rem;
+  letter-spacing: .2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4rem;
+}
+
+.pricing-options .options .plan-pro {
+  color: black;
+  background-color: white;
+}
+
+.pricing-options .options .option h2 {
+  padding: 0 3rem 0 3rem;
+  margin-top: 5.6rem;
+  margin-bottom: 1.8rem;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+}
+
+.pricing-options .options .option h3 {
+  padding: 0 3rem 0 3rem;
+  opacity: 60%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.pricing-options .options .option h4 {
+  font-size: 4rem;
+  letter-spacing: .417rem;
+  line-height: 3rem;
+}
+
+.pricing-options .options .option h4 span {
+  opacity: 60%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
+
+.pricing-options .options .option .price-tablet {
+  display: none;
+}
+
+.comparing {
+  padding: 0 0 6.4rem 0;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comparing table {
+  min-width: 31.8rem;
+  max-width: 68.9rem;
+}
+
+.comparing thead th {
+  padding-bottom: 2.3rem;
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+  text-align: left;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.comparing table tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comparing .heading {
+  padding: 2.3rem 0 2.3rem 0;
+  font-size: 1.2rem;
+  letter-spacing: .2rem;
+  font-weight: 700;
+}
+
+.comparing .comp-row {
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 2.3rem;
+}
+
+.comparing .comp-row span {
+  font-size: 1rem;
+  letter-spacing: .167rem;
+  font-weight: 700;
+  opacity: 50%;
+}
+
+.comparing .comp-row {
+  opacity: 100%;
+}
+
+.beta {
+  position: relative;
+  height: 28.8rem;
+}
+
+.beta .gradient {
+  position: absolute;
+  height: .6rem;
+  left: 3.3rem;
+  width: 12.8rem;
+  background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+}
+
+.beta .beta-img {
+  background: url("/assets/shared/mobile/bg-beta.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.beta .beta-txt {
+  width: calc(310/375*100%);
+  color: white;
+  position: absolute;
+  z-index: 2;
+  left: 3.3rem;
+  top: 7rem;
+}
+
+.beta .beta-txt .get-invite-beta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 17.2rem;
+  margin-bottom: 3.4rem;
+  text-transform: uppercase;
+}
+
+.beta .beta-txt .get-invite-beta span {
+  margin-right: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.beta .beta-txt h3 {
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  letter-spacing: .333rem;
+  line-height: 4rem;
+  margin-bottom: 3.2rem;
+}
+
+@media (min-width: 640px) {
+  .pricing-hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    height: 49rem;
+  }
+  .pricing-hero .pricing-hero-img {
+    background: url("/assets/pricing/tablet/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 49rem;
+    width: 100%;
+  }
+  .pricing-hero .pricing-hero-txt {
+    position: relative;
+    height: 49rem;
+  }
+  .pricing-hero .pricing-hero-txt .gradient {
+    position: absolute;
+    top: 17.3rem;
+    margin: 0;
+    height: 14.4rem;
+    width: .6rem;
+  }
+  .pricing-hero .pricing-hero-txt h2 {
+    width: 100%;
+    padding-left: 6.8rem;
+    padding-right: 6.8rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.8rem;
+    letter-spacing: .417rem;
+    margin-bottom: 2.1rem;
+    margin-top: 17.3rem;
+  }
+  .pricing-hero .pricing-hero-txt h3 {
+    width: 100%;
+    margin: 0;
+    padding-left: 6.8rem;
+    padding-right: 6.8rem;
+    font-weight: 300;
+    opacity: 60%;
+    margin-bottom: 4.8rem;
+  }
+  .pricing-options .options .price-mobile {
+    display: none;
+  }
+  .pricing-options .options .price-tablet {
+    display: block;
+  }
+  .options {
+    -ms-grid-rows: (27rem)[3];
+        grid-template-rows: repeat(3, 27rem);
+  }
+  .options .pricing-pro .gradient {
+    height: .6rem;
+    width: 100%;
+    background: linear-gradient(179.5deg, #FFC593, #BC7198, #5A77FF);
+  }
+  .options .option {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+    padding: 4rem;
+  }
+  .options .option .pricing-excl-price h2 {
+    padding: 0 0 0 0;
+    margin-top: 4rem;
+    margin-bottom: 2.2rem;
+  }
+  .options .option .pricing-excl-price h3 {
+    padding: 0 0 0 0;
+    margin-bottom: 3.2rem;
+  }
+  .comparing table {
+    width: 68.9rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .comparing .heading th {
+    display: none;
+  }
+  .beta {
+    height: 28rem;
+  }
+  .beta .beta-img {
+    background: url("/assets/shared/tablet/bg-beta.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+  .beta .beta-txt {
+    width: 100%;
+    padding: 0 4rem 0 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    left: 0rem;
+    top: 7rem;
+  }
+  .beta .beta-txt h3 {
+    max-width: 40rem;
+    font-size: 4rem;
+    letter-spacing: .417rem;
+    line-height: 4.8rem;
+  }
+  .beta .gradient {
+    height: 100%;
+    left: 0rem;
+    width: .6rem;
+    background: linear-gradient(361deg, #FFC593, #BC7198, #5A77FF);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pricing-hero .pricing-hero-img {
+    background: url("/assets/pricing/desktop/hero.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .pricing-hero .pricing-hero-txt {
+    max-width: 61rem;
+  }
+  .pricing-hero-txt h2 {
+    padding-left: 11.2rem;
+    padding-right: 14rem;
+  }
+  .pricing-hero-txt h3 {
+    padding-left: 11.2rem;
+    padding-right: 14rem;
+  }
+  .options .plan-pro:hover {
+    background-color: #DFDFDF;
+    color: black;
+  }
+  .beta .beta-img {
+    background: url("/assets/shared/desktop/bg-beta.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .beta .beta-txt {
+    padding: 0rem 17.1rem 0rem 17.1rem;
+  }
+  .beta .beta-txt .get-invite-beta span:hover {
     text-decoration: underline;
   }
 }
